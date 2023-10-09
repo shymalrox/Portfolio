@@ -1,0 +1,271 @@
+body {
+    color: #cccccc;
+    background-color: #1a1a1a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    font-size: 24px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        'header header right'
+        'main main right'
+        'footer footer footer';
+    gap: 10%;
+    padding: 5%;
+}
+
+.item  {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s; 
+}
+
+.header { /* Page name */
+    grid-area: header;
+
+    font-size: 35px;
+    text-align: center;
+    color: #4d4dff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main { 
+    grid-area: main;
+    text-align: center;
+}
+
+.card {
+    background-color: #ffffff00;
+    color: #4d4dff;
+    font-size: 35px;
+    text-align: center;
+    display: inline-block;
+    
+    width: 15rem;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px #4d4dff;
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.wordpresspic {
+    width: 50%;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 2%;
+}
+
+.wordpresspic:hover {
+    box-shadow: 0 0 10px 5px #4d4dff;
+}
+
+
+.right { /* Navigation buttons */
+    grid-area: right;
+    margin: 10% 40%;
+}
+
+.footer {
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #4d4dff;
+    text-align: center;
+    font-size: 40px;
+
+    border-radius: 10px;
+    border-color: #4d4dff;
+    min-height: 30px;
+    min-width: auto;
+}
+
+.button:hover {
+    background-color: #ffffff00;
+    border-color: #4d4dff;
+    box-shadow: 0 0 10px 5px #4d4dff;
+    cursor: pointer;
+} 
+
+.button a {
+    color: #4d4dff;
+    text-decoration: none;
+}
+
+.button:hover a {
+    color: #4d4dff;
+}
+
+.btn-one {
+    margin-top: 5rem;
+    
+}
+
+.btn-two {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.btn-three {
+    margin-bottom: 5rem;
+} 
+
+
+/* styling for dark/light mode */
+
+.light-mode {
+    background-color: #cccccc;
+    color: #1a1a1a;
+    transition: all 0.4s ease-in;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 2.75rem;
+    height: 1.53rem;
+    margin-bottom: 0.33rem;
+    margin-inline: auto;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* font size of dark/light mode statement */
+.toggle { 
+    font-size: 18px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: all 0.4s ease-in;
+    border-radius: 1.13rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.13rem;
+    width: 1.13rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4d4dff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 2px #4d4dff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.23rem);
+} 
+
+/* styling for age calculator*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+h1 {
+    text-align: center;
+    margin-bottom: 1.9rem;
+}
+    
+form {
+    display: flex;
+    flex-direction: column;
+}
+    
+label {
+    margin-bottom: 0.63rem;
+    font-weight: bold;
+}
+  
+small {
+    font-style: italic;
+    font-size: 0.75rem;
+}
+  
+input {
+    padding: 0.63rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    border-radius: 5px;
+    border: 2px solid #9898ab;
+}
+  
+.button-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.9rem;
+}
+    
+.submit {
+    background-color: #4d4dff;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 0.63rem;
+}
+    
+.reset {
+    background-color: #ffffff;
+    color: #4d4dff;
+    border: 2px solid #4d4dff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.63rem;
+}
+   
+#age {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.calculator {
+    display: inline-block;
+    color: #000000;
+    max-width: 31.25rem;
+    margin: 3.13rem auto;
+    padding: 1.25rem;
+    background-color: #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #1a1a1a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
