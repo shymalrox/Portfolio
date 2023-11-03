@@ -1,0 +1,144 @@
+<div class="right">
+            
+    <div class="toggle">
+        <p class="mode-status">Dark Mode ON</p>
+        <label class="toggle-switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+        </label> 
+    </div>
+
+    <div class="btn-one">
+        <button class="button">
+        <a href="/about">About Me</a>  
+        </button>
+    </div>
+    
+    <div class="btn-two">
+            <button class="button">
+                <a href="/myjourney">My Journey</a>
+            </button>
+    </div>
+
+    <div class="btn-three">
+            <button class="button">
+                <a href="/myprojects">My Projects</a>
+            </button>
+    </div> 
+
+</div>
+
+
+<style>
+.right { /* Navigation buttons */
+    grid-area: right;
+    margin: 10% 40%;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #4d4dff;
+    text-align: center;
+    font-size: 40px;
+
+    border-radius: 10px;
+    border-color: #4d4dff;
+    min-height: 30px;
+    min-width: auto;
+}
+
+.button:hover {
+    background-color: #ffffff00;
+    border-color: #4d4dff;
+    box-shadow: 0 0 10px 5px #4d4dff;
+    cursor: pointer;
+} 
+
+.button a {
+    color: #4d4dff;
+    text-decoration: none;
+}
+
+.button:hover a {
+    color: #4d4dff;
+}
+
+.btn-one {
+    margin-top: 5rem;
+    
+}
+
+.btn-two {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.btn-three {
+    margin-bottom: 5rem;
+} 
+
+
+/* styling for dark/light mode */
+
+.light-mode {
+    background-color: #cccccc;
+    color: #1a1a1a;
+    transition: all 0.4s ease-in;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 2.75rem;
+    height: 1.53rem;
+    margin-bottom: 0.33rem;
+    margin-inline: auto;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* font size of dark/light mode statement */
+.toggle { 
+    font-size: 18px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: all 0.4s ease-in;
+    border-radius: 1.13rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.13rem;
+    width: 1.13rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4d4dff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 2px #4d4dff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.23rem);
+} 
+</style>

@@ -1,0 +1,74 @@
+---
+import '../../images/html5.png';
+import '../../images/css.png';
+import '../../images/javascript.png';
+import '../../images/wordpress.png';
+---
+<div class="main">
+
+    <h2>Skills</h2>
+
+    <div class="card">
+        <img src="/images/html5.png" class="card-img-top" alt="logo of html5" />
+        <p><b>HTML</b></p>
+    </div>
+            
+    <div class="card">
+        <img src="/images/css.png" class="card-img-top" alt="logo of css" />
+        <p><b>CSS</b></p>
+    </div>
+            
+    <div class="card">
+        <img src="/images/javascript.png" class="card-img-top" alt="logo of javascript" />
+        <p><b>JavaScript</b></p>
+    </div>
+
+    <img src="/images/wordpress.png" class="wordpresspic" alt="logo of WordPress" />
+
+</div>
+
+
+<style>
+    
+.main { 
+    grid-area: main;
+    text-align: center;
+}
+
+.card {
+    background-color: #ffffff00;
+    color: #4d4dff;
+    font-size: 35px;
+    text-align: center;
+    display: inline-block;
+    
+    width: 15rem;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px #4d4dff;
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.wordpresspic {
+    width: 50%;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 2%;
+}
+
+.wordpresspic:hover {
+    box-shadow: 0 0 10px 5px #4d4dff;
+}
+
+</style>
