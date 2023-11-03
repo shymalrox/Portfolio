@@ -258,14 +258,28 @@ input {
     margin-top: 1.25rem;
 }
 
-.calculator {
-    display: inline-block;
+.age-calculator {
+    /*display: inline-block;*/
     color: #000000;
     max-width: 31.25rem;
     margin: 3.13rem auto;
     padding: 1.25rem;
     background-color: #cccccc;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px #1a1a1a;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.age-calc-box {
+    
+    display: inline-block;
+    
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.map {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 10px;
 }

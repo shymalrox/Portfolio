@@ -9,6 +9,12 @@
         <title>Shyann's Personal Website</title>
         <link rel="icon" type="image/x-icon" href="./media/my-logo.png">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
     </head>
 
     <body class="container">
@@ -23,45 +29,45 @@
                 <img src="media/HP-Quotes.png" class="card-img-top" alt="screenshot of the Harry Potter quote generator">
                 <p>Quote Generator</p>
                 <p>Produces random Harry Potter quotes.</p>
-                <p>View on <a href="https://shymalrox.github.io/HP-Quote-Generator/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/HP-Quote-Generator" target="_blank">GitHub</a></p>
             </div>
 
             <div class="card">
                 <img src="media/DC-Memory-Game.png" class="card-img-top" alt="screenshot of the DC Comics Memory Game">
                 <p>Memory Game</p>
                 <p>A basic memory game based on DC Comics.</p>
-                <p>View on <a href="https://shymalrox.github.io/DC-Memory-Game/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/DC-Memory-Game" target="_blank">GitHub</a></p>
             </div>
 
             <div class="card">
                 <img src="media/clock.png" class="card-img-top" alt="screenshot of a clock created with javascript">
                 <p>Clock</p>
                 <p>A simple clock that counts in real time.</p>
-                <p>View on <a href="https://shymalrox.github.io/clock/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/clock" target="_blank">GitHub</a></p>
             </div>
 
             <div class="card">
                 <img src="media/To-Do-List.png" class="card-img-top" alt="screenshot of a to-do list created with javascript">
                 <p>To-Do List</p>
                 <p>A to-do list to help keep track of daily tasks.</p>
-                <p>View on <a href="https://shymalrox.github.io/To-Do-List/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/To-Do-List" target="_blank">GitHub</a></p>
             </div>
 
             <div class="card">
                 <img src="media/Trivia-Quiz-LOTR.png" class="card-img-top" alt="screenshot of a trivia quiz made with javascript">
                 <p>Trivia Quiz</p>
                 <p>Lord of the Rings trivia quiz.</p>
-                <p>View on <a href="https://shymalrox.github.io/Trivia-Quiz-LOTR/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/Trivia-Quiz-LOTR" target="_blank">GitHub</a></p>
             </div>
 
             <div class="card">
                 <img src="media/calculator.png" class="card-img-top" alt="screenshot of a calculator">
                 <p>Calculator</p>
                 <p>A functional mini calculator.</p>
-                <p>View on <a href="https://shymalrox.github.io/Calculator/" target="_blank">GitHub</a></p>
+                <p>View on <a href="https://github.com/shymalrox/Calculator" target="_blank">GitHub</a></p>
             </div>
 
-            <div class="calculator">
+            <div class="age-calculator">
                 <h1>Age Calculator</h1>
                 <form>
                     <label for="birthdate">Enter your birthdate:</label>
@@ -74,6 +80,26 @@
                 </form>
                 <p id="age"></p>
             </div>
+
+            <div class="map">
+                <div id="map" style="width: 400px; height: 400px;"></div> 
+                <script>
+                        //coordinates for Dallas, Tx
+                    const map = L.map('map').setView([32.7798306254106, //latitude
+                        -96.79478448887093], //longitude
+                        12);    //zoom
+            
+                    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+
+                        //coordinates for Methodist City Dallas Hospital (the hospital I was born in)
+                    var marker = L.marker([32.7798306254106, -96.79478448887093]).addTo(map);
+                    marker.bindPopup("Methodist City Dallas Hospital").openPopup();
+                    
+                </script>
+            </div>    
 
         </div>
 
@@ -100,9 +126,9 @@
                 <a href="https://instagram.com/shyannmaldonado?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank;">Instagram</a>
                 </p>
             </div>
-        </footer>
 
-        <script src="JavaScript/script.js"></script>
+            <script src="JavaScript/script.js"></script>     
+        </footer>
     
     </body>
 </html>
